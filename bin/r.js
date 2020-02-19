@@ -1,6 +1,5 @@
-#!/usr/bin/env node
 /**
- * @license r.js 2.3.6 Copyright jQuery Foundation and other contributors.
+ * @license r.js 2.3.6 Wed, 19 Feb 2020 20:05:25 GMT Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/r.js/LICENSE
  */
 
@@ -20,7 +19,7 @@ var requirejs, require, define, xpcUtil;
 (function (console, args, readFileFunc) {
     var fileName, env, fs, vm, path, exec, rhinoContext, dir, nodeRequire,
         nodeDefine, exists, reqMain, loadedOptimizedLib, existsForNode, Cc, Ci,
-        version = '2.3.6',
+        version = '2.3.6 Wed, 19 Feb 2020 20:05:25 GMT',
         jsSuffixRegExp = /\.js$/,
         commandOption = '',
         useLibLoaded = {},
@@ -25899,7 +25898,7 @@ define('parse', ['./esprimaAdapter', 'lang'], function (esprima, lang) {
             //if that has a define.amd test
             if (bodyNode.consequent && bodyNode.consequent.body) {
                 exp = bodyNode.consequent.body[0];
-                if (exp.type === 'ExpressionStatement' && exp.expression &&
+                if (exp && exp.type === 'ExpressionStatement' && exp.expression &&
                     parse.hasDefine(exp.expression) &&
                     exp.expression.arguments &&
                     exp.expression.arguments.length === 1 &&
